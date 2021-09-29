@@ -2,7 +2,7 @@ import Description from "./Description";
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useContext } from "react";
-import CartContext from "./cart-context";
+import CartContext from "../Contexts/cart-context";
 import styles from './MenuOption.module.css'
 
 const MenuOption = (props) => {

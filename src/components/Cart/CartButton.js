@@ -3,7 +3,7 @@ import { Card, Row, Col, Container } from "react-bootstrap";
 import React, { useContext, useState } from "react";
 import Cart from "./Cart.js";
 import ReactDOM from "react-dom";
-import CartContext from "../cart-context";
+import CartContext from "../Contexts/cart-context";
 
 const CartButton = () => {
   const [cartWindowOn, setCartWindow] = useState(false);
@@ -13,7 +13,7 @@ const CartButton = () => {
     setCartWindow(true);
   };
 
-  const overlayClicked = () => {
+  const closeCart = () => {
     setCartWindow(false);
   };
 
@@ -23,8 +23,8 @@ const CartButton = () => {
     <React.Fragment>
       {cartWindowOn &&
         ReactDOM.createPortal(
-          <div onClick={overlayClicked} className={styles.overlay}>
-            <Cart></Cart>
+          <div onClick={closeCart} className={styles.overlay}>
+            <Cart onCloseCart={closeCart}></Cart>
           </div>,
           cartRoot
         )}

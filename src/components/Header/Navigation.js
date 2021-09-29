@@ -1,5 +1,5 @@
 import React from 'react';
-import CartButton from './Cart/CartButton';
+import CartButton from '../Cart/CartButton';
 import {Navbar, Container} from 'react-bootstrap'
 
 const Navigation = React.memo(() => {

@@ -1,13 +1,12 @@
 import "./App.css";
-import Navigation from "./components/Navigation";
-import React, { useEffect, useReducer } from "react";
-import IntroText from "./components/IntroText";
-import Menu from "./components/Menu";
-import CartContext from "./components/cart-context";
+import Navigation from "./components/Header/Navigation";
+import React, { useReducer } from "react";
+import IntroText from "./components/Header/IntroText";
+import Menu from "./components/Menu/Menu";
+import CartContext from "./components/Contexts/cart-context";
 
 const cartReducer = (state, action) => {
   if (action.type === "NEW_ITEM_ADDED") {
-    let found = false;
     const cartItemsCopied = state.cartItems.slice();
     let sum = 0;
 
@@ -33,6 +32,12 @@ const cartReducer = (state, action) => {
       sum += myArray[i].price * myArray[i].amount;
     }
     return { cartItems: myArray, cartTotalPrice: sum, totalNumberOfItems: state.totalNumberOfItems + action.val.amount };
+  }
+
+  if(action.type === "EMPTY_ARRAY"){
+    const cartItemsCopied = state.cartItems.slice();
+    cartItemsCopied.length = 0;
+    return { cartItems: cartItemsCopied, cartTotalPrice: 0, totalNumberOfItems: 0 };
   }
 
   if (action.type === "ITEM_REMOVED") {
@@ -69,7 +74,6 @@ function App() {
       price: itemPrice,
       amount: itemAmount,
     };
-    let isNewItem = true;
     cartDispatch({ type: "NEW_ITEM_ADDED", val: newItems });
   };
 
@@ -77,9 +81,13 @@ function App() {
     cartDispatch({ type: "ITEM_REMOVED", val: itemName });
   };
 
+  const emptyArray = () => {
+    cartDispatch({type: "EMPTY_ARRAY"});
+  }
+
   return (
     <React.Fragment>
-      <CartContext.Provider value={{ addCartItems: addCartItems, removeItem: removeItem, cartState: cartState }}>
+      <CartContext.Provider value={{ addCartItems: addCartItems, removeItem: removeItem, emptyArray: emptyArray, cartState: cartState }}>
         <div style={{ fontFamily: "sans-serif", backgroundColor: "#A9E4D7", paddingBottom: "20px" }}>
           <Navigation />
           <IntroText />

@@ -1,0 +1,13 @@
+.introtext {
+  background-color: #F6416C;
+  height: 150px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 600px;
+}
+
+.introtext h1{
+    color: white;
+    margin: auto;
+}

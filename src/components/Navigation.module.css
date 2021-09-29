@@ -1,0 +1,10 @@
+.navbar{
+    display: inline;
+    position: relative;
+    left:0;
+    top:0;
+    background-color: red;
+    width:100%;
+    margin: 0;
+    padding: 0;
+}

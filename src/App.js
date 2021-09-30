@@ -88,7 +88,7 @@ function App() {
   return (
     <React.Fragment>
       <CartContext.Provider value={{ addCartItems: addCartItems, removeItem: removeItem, emptyArray: emptyArray, cartState: cartState }}>
-        <div style={{ fontFamily: "sans-serif", backgroundColor: "#A9E4D7", paddingBottom: "20px" }}>
+        <div style={{ fontFamily: "sans-serif", backgroundColor: "#A9E4D7",width: '100%', paddingBottom: "20px" }}>
           <Navigation />
           <IntroText />
           <Menu />

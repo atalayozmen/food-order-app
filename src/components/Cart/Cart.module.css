@@ -13,7 +13,7 @@
 
 .cart{
     margin: auto;
-    width: 45%;
+    width: 60%;
     margin-top: 100px;
     height: 350px;
     padding: 5px;
@@ -24,4 +24,10 @@
   overflow-y: scroll;
   min-height: 240px;
   max-height: 240px;
+}
+
+@media (max-width: 650px) {
+  .cart{
+    width: 90%
+  }
 }

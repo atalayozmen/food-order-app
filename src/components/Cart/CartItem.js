@@ -16,7 +16,7 @@ const CartItem = (props) => {
 
   return (
     <React.Fragment>
-      <Card style={{ margin: "5px", marginRight: "10px" }}>
+      <Card style={{ marginBottom: "5px", marginRight: "0px", marginLeft: "0px"}}>
         <Container>
           <Row>
             <Col>

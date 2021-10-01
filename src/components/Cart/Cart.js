@@ -21,8 +21,8 @@ const Cart = (props) => {
 
   return (
     <Card onClick={onCardClick} className={styles.cart}>
-      <Card className={styles.cartscrollable}>
-        <ul>
+      <Card className={styles.cartscrollable} style={{paddingTop: "5px"}}>
+        <ul style={{padding: "5px"}}>
           {ctx.cartState.cartItems.map((item) => (
             <CartItem key={uuid()} foodName={item.foodName} price={item.price} amount={item.amount} />
           ))}
@@ -36,10 +36,10 @@ const Cart = (props) => {
             </Col>
 
             <Col md="auto">
-              <button onClick={onOrderClicked} className="btn btn-primary" style={{ marginRight: "10px" }}>
+              <button onClick={onOrderClicked} className="btn btn-primary" style={{ marginRight: "10px",float: "right" }}>
                 Order
               </button>
-              <button onClick={props.onCloseCart} className="btn btn-primary" style={{ marginRight: "10px" }}>
+              <button onClick={props.onCloseCart} className="btn btn-primary" style={{ marginRight: "10px",float:"right" }}>
                 Close
               </button>
             </Col>

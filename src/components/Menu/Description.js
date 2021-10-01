@@ -6,7 +6,7 @@ const Description = React.memo((props) => {
         <React.Fragment>
             <h4>{props.foodName}</h4>
             <div>{props.description}</div>
-            <p >Price: {props.price}</p>
+            <p >Price: {props.price}$</p>
         </React.Fragment>
     )
 })

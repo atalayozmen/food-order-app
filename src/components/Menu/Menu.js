@@ -9,12 +9,12 @@ const Menu = React.memo((props) => {
     {
       foodName: "Fried Rice",
       description: "Fried Rice with vegetables",
-      price: 18.0,
+      price: 18.99,
     },
     {
       foodName: "Dumplings",
       description: "Dumplings with meat and yoghurt",
-      price: 18.0,
+      price: 15.49,
     },
     {
       foodName: "Sushi",
@@ -29,7 +29,7 @@ const Menu = React.memo((props) => {
     {
       foodName: "Adana Kebab",
       description: "Adana Kebab with grilled vegetables",
-      price: 18.0,
+      price: 31.99,
     },
   ];
 

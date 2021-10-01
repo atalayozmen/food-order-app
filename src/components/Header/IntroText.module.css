@@ -12,3 +12,9 @@
     color: white;
     margin: auto;
 }
+
+@media (max-width: 768px) {
+  .introtext{
+      width: 90%;
+  }
+}

@@ -6,3 +6,9 @@
     margin-bottom: 0px;
     background-color: #00B8A9;
 }
+
+@media (max-width: 768px) {
+    .menu{
+        width: 90%;
+    }
+}

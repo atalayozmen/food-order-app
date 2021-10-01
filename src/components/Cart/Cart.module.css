@@ -26,7 +26,8 @@
   max-height: 240px;
 }
 
-@media (max-width: 650px) {
+
+@media (max-width: 768px)  {
   .cart{
     width: 90%
   }
